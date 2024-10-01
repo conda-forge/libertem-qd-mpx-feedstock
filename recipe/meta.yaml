@@ -1,5 +1,5 @@
 {% set name = "libertem-qd-mpx" %}
-{% set version = "0.2.12" %}
+{% set version = "0.2.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/libertem_qd_mpx-{{ version }}.tar.gz
-  sha256: 0e351192a4b78b9adbccafb1791711372fab27dd055a6bfecb74b5ff71bbb9ab
+  sha256: 6d7266a203b34b7e3f10be72da0a7d39e5e0f7c8064981b50e81061d965386ae
 
 build:
   skip: true  # [py<37]
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
