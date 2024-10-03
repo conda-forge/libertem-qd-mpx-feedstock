@@ -29,6 +29,7 @@ requirements:
     - pip
   run:
     - python
+    - opentelemetry-api
 
 test:
   commands:
