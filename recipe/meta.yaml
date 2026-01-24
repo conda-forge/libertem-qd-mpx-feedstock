@@ -1,5 +1,5 @@
 {% set name = "libertem-qd-mpx" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/libertem_qd_mpx-{{ version }}.tar.gz
-  sha256: af5b9600b3f8f4ad9911c0c6673f939629e29e8cb85fdd9f579c2e5037d0e75b
+  sha256: 5426051957583cfd04600cadd91ea9d346e41a33b5c864ef964b3dfe519d172f
 
 build:
   skip: true  # [py<37]
