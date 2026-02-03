@@ -10,9 +10,8 @@ source:
   sha256: 5426051957583cfd04600cadd91ea9d346e41a33b5c864ef964b3dfe519d172f
 
 build:
-  skip: true  # [py<37]
+  skip: true  # [py<39]
   script:
-    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -21,7 +20,6 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('c') }}
     - {{ compiler('rust') }} >=1.66
-    - cargo-bundle-licenses
   host:
     - python
     - maturin >=1.5,<2.0
@@ -45,7 +43,7 @@ about:
   license: MIT
   license_file:
     - LICENSE
-    - THIRDPARTY.yml
+    - libertem_qd_mpx/THIRDPARTY.yml
   description: |
     Python package for efficiently receiving data
     from Quantum Detectors Merlin detectors
